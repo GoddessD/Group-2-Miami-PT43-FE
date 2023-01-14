@@ -4,3 +4,5 @@ Jerry Exuma
 
 
 Daniella Louis
+
+Staphanie King
