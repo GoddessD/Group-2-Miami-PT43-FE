@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './component/Navbar';
-import LandingPage from './pages/LandingPage';
+//import LandingPage from './pages/LandingPage';
 import LogIn from './pages/LogIn';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
@@ -19,10 +19,7 @@ function App() {
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
             <Route exact path="/home"element={<Home/>}/ >
-            <Route exact path="/"element={<LandingPage/>}/ >
-						
-						
-						</Routes>
+          </Routes>
 					<Footer />
 				
 			</BrowserRouter>

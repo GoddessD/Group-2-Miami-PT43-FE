@@ -43,7 +43,19 @@
   color :white
 }
 
-.landing {
+.left-container {
+  float: center;
+  display:block;
+  padding: 0;
+  margin:25px;
+}
+
+.right-container {
+
+}
+
+.center-container {
 
   background-color: green;
 }
+
