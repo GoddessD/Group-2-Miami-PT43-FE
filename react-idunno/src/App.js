@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import Footer from './component/Footer';
 import SignUp from './pages/SignUp';
-
+import Generator from './pages/Generator';
 
 
 function App() {
@@ -19,7 +19,10 @@ function App() {
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
             <Route exact path="/home"element={<Home/>}/ >
-          </Routes>
+            <Route exact path="/"element={<LandingPage/>}/ >
+						
+						
+						</Routes>
 					<Footer />
 				
 			</BrowserRouter>
