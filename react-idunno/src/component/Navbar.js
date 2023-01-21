@@ -22,6 +22,7 @@ const NavBar = () => {
         <div className="right-container">
         <Link to="/signup">Sign Up</Link>
         <Link to="/login">Log In</Link>
+        </div>
       </nav>
     </div>
   );

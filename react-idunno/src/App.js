@@ -19,9 +19,7 @@ function App() {
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
             <Route exact path="/home"element={<Home/>}/ >
-            <Route exact path="/"element={<LandingPage/>}/ >
-						
-						
+            <Route exact path="/generator"element={<Generator/>}/>			
 						</Routes>
 					<Footer />
 				
