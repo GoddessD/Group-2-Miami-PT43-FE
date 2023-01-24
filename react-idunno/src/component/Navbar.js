@@ -11,7 +11,13 @@ const NavBar = () => {
       <nav className="me-auto ">
         <div className="left-container">
         <Link to="/home">Home</Link>
+<<<<<<< HEAD
         <Link to="/generator">Generator</Link>
+=======
+        <Link to="/AboutUs"> About Us</Link>
+        <Link to="/Generator">Generator</Link>
+        <Link to="/ContactUs"> Contact Us</Link>
+>>>>>>> dev
         </div>
         <div className='center-container'>
         </div>
