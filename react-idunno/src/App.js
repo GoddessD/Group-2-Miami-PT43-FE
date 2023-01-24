@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Footer from './component/Footer';
 import SignUp from './pages/SignUp';
 import Generator from './pages/Generator';
+import ContactUs from './pages/ContactUs';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
             <Route exact path="/home"element={<Home/>}/ >
-            <Route exact path="/generator"element={<Generator/>}/>			
+            <Route exact path="/generator"element={<Generator/>}/>		
+            <Route exact path="/contactus"element={<ContactUs/>}/>	
 						</Routes>
 					<Footer />
 				

@@ -11,9 +11,9 @@ const NavBar = () => {
       <nav className="me-auto ">
         <div className="left-container">
         <Link to="/home">Home</Link>
-        <Link to="/register"> About Us</Link>
-        <Link to="/register">Generator</Link>
-        <Link to="/register"> Contact Us</Link>
+        <Link to="/AboutUs"> About Us</Link>
+        <Link to="/Generator">Generator</Link>
+        <Link to="/ContactUs"> Contact Us</Link>
         </div>
         <div className='center-container'>
           <h1>Welcome to My Website!</h1>

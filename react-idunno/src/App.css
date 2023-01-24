@@ -59,3 +59,20 @@
   background-color: green;
 }
 
+.center-left {
+  float: left;
+  display:block;
+  padding: 0;
+  margin:25px;
+  background-color:black;
+  text-color: white;
+}
+
+.appcover {
+  border-color: black;
+  float: right;
+  display:block;
+  padding: 0;
+  margin:25px;
+
+}
