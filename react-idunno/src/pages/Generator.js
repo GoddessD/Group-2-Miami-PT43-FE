@@ -20,7 +20,7 @@ const Generator = () => {
       <button type="button" class="btn btn-primary btn-lg m-2">Date Night</button>
       <button type="button" class="btn btn-primary btn-lg m-2">Rolling Solo</button>
       <h2>
-        Step 2: Select your adventure !
+        Step 2: Select your adventure! !
       </h2>
       <div className="Card">
       <Card />
