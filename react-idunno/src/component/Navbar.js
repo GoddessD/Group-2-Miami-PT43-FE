@@ -3,7 +3,7 @@ import React from 'react';
 //import Nav from 'react-bootstrap/Nav';
 //import Navbar from 'react-bootstrap/Navbar';
 import {Link}from 'react-router-dom'
-
+import Home from '../pages/Home';
 
 const NavBar = () => {
   return (
@@ -11,13 +11,15 @@ const NavBar = () => {
       <nav className="me-auto ">
         <div className="left-container">
         <Link to="/home">Home</Link>
+<<<<<<< HEAD
+        <Link to="/generator">Generator</Link>
+=======
         <Link to="/AboutUs"> About Us</Link>
         <Link to="/Generator">Generator</Link>
         <Link to="/ContactUs"> Contact Us</Link>
+>>>>>>> dev
         </div>
         <div className='center-container'>
-          <h1>Welcome to My Website!</h1>
-          <p>Learn more about our products and services.</p>
         </div>
         <div className="right-container">
         <Link to="/signup">Sign Up</Link>

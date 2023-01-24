@@ -59,6 +59,16 @@
   background-color: green;
 }
 
+<<<<<<< HEAD
+.btn, .btn-primary {
+  width: 200px;
+
+}
+
+.Card {
+  display: flex;  
+  flex-direction: row;
+=======
 .center-left {
   float: left;
   display:block;
@@ -75,4 +85,5 @@
   padding: 0;
   margin:25px;
 
+>>>>>>> dev
 }
