@@ -6,7 +6,7 @@ import "../App.css"
 const LogIn = () => {
   return (
     <div>
-      <h1>LogIn</h1>
+      <h1>Login</h1>
       </div>
       
   );
