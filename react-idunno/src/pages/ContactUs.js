@@ -7,7 +7,7 @@ const ContactUs = () => {
     <><div className='container-left'>
       <div className='Title'><h1>Contact Us</h1></div>
 
-      <div className='Address'><h4><i class="fas-duotone fa-map-location"></i>111 NE 1st Street, Suite 808,Miami, FL 33132</h4></div>
+      <div className='Address'><h4><i class="fas-duotone fa-map-location">111 NE 1st Street, Suite 808,Miami, FL 33132</i></h4></div>
 
       <div className='OfficeNumber'><h4><i class="fas-duotone fa-phone-office"></i>1-888-843-2378 (THE BEST)</h4></div>
 
