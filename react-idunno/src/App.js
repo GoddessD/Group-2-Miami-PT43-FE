@@ -5,7 +5,7 @@ import Navbar from './component/Navbar';
 import LogIn from './pages/LogIn';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
-import Footer from './component/Footer';
+//import Footer from './component/Footer';
 import SignUp from './pages/SignUp';
 import Generator from './pages/Generator';
 
@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/home"element={<Home/>}/ >
             <Route exact path="/generator"element={<Generator/>}/>			
 						</Routes>
-					<Footer />
+					
 				
 			</BrowserRouter>
      
