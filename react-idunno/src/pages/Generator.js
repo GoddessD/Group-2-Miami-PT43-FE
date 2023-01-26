@@ -23,8 +23,8 @@ const Generator = () => {
         Step 2: Select your adventure! !
       </h2>
       <div className="Card">
-      <Card />
-      <Card />
+      <Card src={'https://picsum.photos/300/200'} title = {'Resturant'} />
+      <Card src={'https://cdn.techmadeplain.com/img/2014/300x200.png'} /> 
       <Card />
       </div>
     </div>
