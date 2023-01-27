@@ -169,18 +169,6 @@ button {
   background-color: #2b6da9;
 }
 
-.center-button {
-  text-align: center;
-
-.btn, .btn-primary {
-  width: 200px;
-
-}
-
-.Card {
-  display: flex;  
-  flex-direction: row;
-
 .center-left {
   float: left;
   display:block;
@@ -196,6 +184,18 @@ button {
   display:block;
   padding: 0;
   margin:25px;
-
-
 }
+
+.Card {
+  display: flex;  
+  flex-direction: row;
+}
+.center-left {
+  float: left;
+  display:block;
+  padding: 0;
+  margin:25px;
+  background-color:black;
+  text-color: white; }
+}
+

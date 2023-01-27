@@ -10,7 +10,6 @@ import Home from '../pages/Home';
 const Navbar = () => {
   return (
     <div>
-
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
