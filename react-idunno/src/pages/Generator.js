@@ -23,9 +23,9 @@ const Generator = () => {
         Step 2: Select your adventure! !
       </h2>
       <div className="Card">
-      <Card src={'https://picsum.photos/300/200'} title = {'Resturant'} />
-      <Card src={'https://cdn.techmadeplain.com/img/2014/300x200.png'} /> 
-      <Card />
+      <Card src={'https://picsum.photos/300/200'} title = {'Resturant'} description = {'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} button = {'Resturant'} />
+      <Card src={'https://cdn.techmadeplain.com/img/2014/300x200.png'} title = {'Activity'} description = {'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} button = {'Activity'} /> 
+      <Card src={'https://picsum.photos/300/200/?blur'} title = {'Event'} description = {'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} button = {'Event'} /> 
       </div>
     </div>
   );
