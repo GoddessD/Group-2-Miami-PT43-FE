@@ -2,13 +2,15 @@ import React from 'react';
 //import Container from 'react-bootstrap/Container';
 //import Nav from 'react-bootstrap/Nav';
 //import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom'
+import {Link}from 'react-router-dom'
+import Home from '../pages/Home';
 
 
 
 const Navbar = () => {
   return (
     <div>
+
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -42,8 +44,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </nav>
+          </nav>
     </div>
   );
 };

@@ -1,5 +1,6 @@
-import React  from "react";
+import React from "react";
 import "../App.css"
+import Card from "../component/Card";
 
 //Add class names 
 //Level 1: Family, Friends,Date Night - 1 selection
@@ -10,12 +11,24 @@ import "../App.css"
 //
 
 const Generator = () => {
-    return (
-      <div>
-        <h1>Let us decide</h1>
-        
+  return (
+    <div>
+      <h1>Let us decide</h1>
+      <h2>Step 1: Select perfered category</h2>
+      <button type="button" class="btn btn-primary btn-lg m-2">Family</button>
+      <button type="button" class="btn btn-primary btn-lg m-2">Friends</button>
+      <button type="button" class="btn btn-primary btn-lg m-2">Date Night</button>
+      <button type="button" class="btn btn-primary btn-lg m-2">Rolling Solo</button>
+      <h2>
+        Step 2: Select your adventure! !
+      </h2>
+      <div className="Card">
+      <Card />
+      <Card />
+      <Card />
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
+
 export default Generator;
