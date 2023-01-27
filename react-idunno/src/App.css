@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: yellow
+  background-color: blue;
   
 }
 
@@ -26,7 +26,7 @@
   color :white;
   width: 100%;
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 img.navbar-logo {
@@ -54,7 +54,9 @@ img.navbar-logo {
   font-size: 7em;
   font-weight: bold;
   padding: 20px;
-  color:blue
+  color: gold;
+  font-family: 'Courier New', Courier, monospace;
+
   
 }
 
@@ -62,17 +64,12 @@ img.navbar-logo {
   display: inline-block;
   float: left;
 }
-.image {
-  display: inline-block;
-  margin-right: 10px;
-}
-.image {
-  float:right;
-  margin-right: 10px;
-  width: 500px;
-  height:500px;
-  
-}
+
+  img {
+    height: 300px;
+    width: 300px;
+    float: right;
+  }
 
 
 .div.button-container {
@@ -87,7 +84,7 @@ button {
 }  
 
 .custom-color{
-  background-color: yellow;
+  background-color: rgb(194, 152, 75);
 }
 
 .login-form {

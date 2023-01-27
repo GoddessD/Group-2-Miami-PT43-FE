@@ -8,12 +8,12 @@ const Home = () => {
   return (
     <div className="center-button" >
       <div className="image-container">
-        <img
-          src="/idunnomanyb.png"
+       <img
+          src="/idunnologowstroke.png"
           alt="example image"
           className="image"
         />
-      </div>
+        </div>
       <div className='main-content'>
 
       </div>
