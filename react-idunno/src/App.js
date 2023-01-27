@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/generator"element={<Generator/>}/>		
             <Route exact path="/contactus"element={<ContactUs/>}/>	
 						</Routes>
-					<Footer />
+					
 				
 			</BrowserRouter>
      
