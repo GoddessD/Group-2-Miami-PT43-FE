@@ -169,21 +169,40 @@ button {
   background-color: #2b6da9;
 }
 
-.center-left {
-  float: left;
-  display:block;
-  padding: 0;
-  margin:25px;
-  background-color:black;
-  text-color: white;
+.container-left {
+  float:left;
+  display:inline block;
+  padding: 50;
+  margin:50;
+  width: 100%;
+  height:825px;
+  text-align: right;
+  text-decoration-color: black; 
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:white;
+  font-style: initial;
+  background-image: url(https://play-lh.googleusercontent.com/Nt6xrgsJdc0xPOoiEvqrADCfB-Mpi00lp6IPI84aprVGljgIGEr5uSIs936Lv-Rikg=w526-h296-rw);
+ background-repeat:no-repeat;
+ background-size: 30%;
+ align-items: left;
+
 }
 
-.appcover {
-  border-color: black;
-  float: right;
-  display:block;
-  padding: 0;
-  margin:25px;
+.contact-form {
+ display:inline-block;
+  justify-content: right;
+  flex-direction: column;
+  align-items:right ;
+  background-color: black;
+  text-decoration-color: white;
+  text-align: right;
+  height: 500px;
+  width: 80%;
+  margin-left: 25%;
 }
 
 .Card {
