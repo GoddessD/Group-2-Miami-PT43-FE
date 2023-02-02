@@ -189,6 +189,7 @@ button {
 .Card {
   display: flex;  
   flex-direction: row;
+  justify-content: center;
 }
 .center-left {
   float: left;
@@ -276,4 +277,22 @@ button {
   position: relative;
   margin: auto;
   justify-content: center;
+}
+
+.cardwidth {
+  max-width: 300px;
+  min-width: 300px;
+ 
+}
+
+.display {
+  display: none;
+}
+
+.display2 {
+  display: none;
+}
+
+.display3 {
+  display: none;
 }

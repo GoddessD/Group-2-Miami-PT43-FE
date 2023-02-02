@@ -1,10 +1,10 @@
 import React from "react";
 import "../App.css"
 
-function SelectButtons ({button}){
+function SelectButtons ({button,categorySelection}){
     return(
     <div>
-    <button class="button-85" role="button">{button}</button>
+    <button className="toggle" class="button-85" role="button" onClick={categorySelection}>{button}</button>
     </div>
     )
 }
