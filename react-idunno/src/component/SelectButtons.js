@@ -1,12 +1,18 @@
 import React from "react";
 import "../App.css"
+import { useState } from "react";
+
 
 function SelectButtons ({button,categorySelection}){
+    const [active,setActive] = useState(false);
+    const handleClick = () => {
+        setActive(!active);
+    };
+    
     return(
-    <div>
-    <button className="toggle" class="button-85" role="button" onClick={categorySelection}>{button}</button>
-    </div>
-    )
+    <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick()}}>{button}</button></div>
+    
+    );
 }
 
 export default SelectButtons;
