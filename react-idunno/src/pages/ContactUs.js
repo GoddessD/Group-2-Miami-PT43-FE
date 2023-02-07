@@ -1,38 +1,26 @@
 import React from 'react';
 import "../App.css"
-<script src="https://kit.fontawesome.com/b27ffd9eb3.js" crossorigin="anonymous"></script>
+
+
 
 const ContactUs = () => {
   return (
 
-    <><div classname="corners">
-      <div classname='top-left-corner'></div>
-      <div classname='bottom-right-corner'></div>
-      <div classname='top-right-corner'></div>
-      <div classname='bottom-right-corner'></div>
-    </div>
-    
-    <div className='container-left'>
-        <div classname='contact-container'>
-          <div className='Title'><h1>Contact Us</h1></div>
+    <><div className='container-left'>
+      <div classname='contact-container'>
+        <div className='Title'><h1>Contact Us</h1></div>
 
 
-          <div className='Address'><h8><i class="fa-solid fa-location-dot"> 111 NE 1st Street,Ste 808,Miami, FL 33132</i></h8></div>
+        <div className='Address'><h8><i class="fa-solid fa-location-dot"> 111 NE 1st Street,Ste 808,Miami, FL 33132</i></h8></div>
 
-          <div className='OfficeNumber'><h5><i class="fa-solid fa-phone-volume"></i> 1-888-843-2378 (THE BEST)</h5></div>
+        <div className='OfficeNumber'><h5><i class="fa-solid fa-phone-volume"></i> 1-888-843-2378 (THE BEST)</h5></div>
 
-          <div className='workemail'><h5><i class="fa-solid fa-envelope"></i> admin@idunno.com</h5></div>
-          
-          <div className='Website'><h5><i class="fa-sharp fa-solid fa-globe"></i> https://www.idunno.com/</h5></div>
-        </div></div>
-        
-        
-        
-        
-        
-        
-        
-        <div classname="contact form">
+        <div className='workemail'><h5><i class="fa-solid fa-envelope"></i> admin@idunno.com</h5></div>
+
+        <div className='Website'><h5><i class="fa-sharp fa-solid fa-globe"></i> https://www.idunno.com/</h5></div>
+      </div></div>
+
+      <div classname="contact-form">
         <form>
           <div class="name">
             <label for="InputName">Full Name*</label>
@@ -50,9 +38,14 @@ const ContactUs = () => {
             <label for="exampleInputPassword1 form-control">Message*</label>
             <input type="message" class="form-control" id="InputMessage" placeholder="Message" />
           </div>
+          <div>
+            <button type="button">Click Me</button>
+          </div>
         </form>
-      </div></>
-        );
-};
+        </div>
 
-       export default ContactUs;
+    </>
+  );
+  };
+
+export default ContactUs;
