@@ -1,19 +1,14 @@
 .App {
   text-align: center;
-  background-color: pink;
+  background-color: blue;
   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-fluid{
+  display: flex;
+  justify-content: space-evenly;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color:pink;
@@ -26,24 +21,181 @@
   color: pink;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .navbar {
-  color :white
+  color :white;
+  width: 100%;
+  display:flex;
+  justify-content: center;
 }
 
-.landing {
-
-  background-color: green;
+img.navbar-logo {
+  width:150px;
+  height: 150px;
 }
+
+.navbar-brand {
+  margin-right: 150px;
+
+
+}
+
+.left-container {
+  float: center;
+  display:block;
+  padding: 0;
+  margin:25px;
+}
+
+
+
+.header {
+  text-align: left;
+  font-size: 7em;
+  font-weight: bold;
+  padding: 20px;
+  color: gold;
+  font-family: 'Courier New', Courier, monospace;
+
+  
+}
+
+.main-content {
+  display: inline-block;
+  float: left;
+}
+
+  img {
+    height: 300px;
+    width: 300px;
+    float: right;
+  }
+
+
+.div.button-container {
+  
+  justify-content: flex-end;
+  padding-left: 20%;
+
+  }
+button {
+  margin-left:10px;
+  margin-right: 10px;
+}  
+
+.custom-color{
+  background-color: rgb(194, 152, 75);
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-input {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 300px;
+  background-color: #4CAF50;
+  color:
+}
+
+.button-container.right {
+  position: absolute; /*
+  right: 0;
+}
+
+
+.login-form {
+  width: 300px; /* adjust width as needed */
+  height: 300px; /* add a fixed height */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px; /* round the corners */
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #fafafa;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  box-shadow: inset 0px 0px 5px #ccc;
+}
+
+.form-text {
+  font-size: 12px;
+  color: #333;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+}
+
+.form-check-label {
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.btn-primary {
+  background-color: #3897f0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px #ccc;
+}
+
+.btn-primary:hover {
+  background-color: #2b6da9;
+}
+
+.center-left {
+  float: left;
+  display:block;
+  padding: 0;
+  margin:25px;
+  background-color:black;
+  text-color: white;
+}
+
+.appcover {
+  border-color: black;
+  float: right;
+  display:block;
+  padding: 0;
+  margin:25px;
+}
+
+.Card {
+  display: flex;  
+  flex-direction: row;
+}
+.center-left {
+  float: left;
+  display:block;
+  padding: 0;
+  margin:25px;
+  background-color:black;
+  text-color: white; }
+}
+
