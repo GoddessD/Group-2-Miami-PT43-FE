@@ -9,30 +9,22 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Generator from './pages/Generator';
 import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-<<<<<<< HEAD
-        <Navbar />
-        <Routes>
-          <Route exact path="/signup"element={<SignUp/>}/>
-          <Route exact path="/login"element={<LogIn/>}/>
-          <Route exact path="/home"element={<Home/>}/>
-          <Route exact path="/generator"element={<Generator/>}/>
-
-        </Routes>
-      </BrowserRouter>
-=======
 				<Navbar />
 					<Routes>
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
             <Route exact path="/home"element={<Home/>}/ >
             <Route exact path="/generator"element={<Generator/>}/>		
-            <Route exact path="/contactus"element={<ContactUs/>}/>	
+            <Route exact path="/contact"element={<ContactUs/>}/>	
+            <Route exact path="/about"element={<AboutUs/>}/>	
+            
 						</Routes>
 					
 				
@@ -41,7 +33,6 @@ function App() {
   
         
       
->>>>>>> dev
     </div>
 
   );
