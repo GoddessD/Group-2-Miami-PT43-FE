@@ -10,9 +10,13 @@ function SelectButtons ({button,categorySelection}){
     };
     
     return(
-    <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick()}}>{button}</button></div>
+        <div>
+        <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick()}}>{button}</button></div>
+        </div>
+    
     
     );
-}
+};
 
 export default SelectButtons;
+

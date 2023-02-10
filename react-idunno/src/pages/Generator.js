@@ -5,8 +5,6 @@ import SelectButtons from "../component/SelectButtons";
 
 
 
-// use state for resturant etc everything that updates after clicking submit button 
-// hidden button for save 
 
 const Generator = () => {
   
@@ -74,6 +72,23 @@ const Generator = () => {
   const rollingSoloCategory =() => {
     console.log('Rolling Solo category has been selected')
   }
+  const fetchData = () => {
+     fetch("https://api.yelp.com/v3/businesses/search?location=NYC&categories=bars&open_now=true", {
+      headers: {
+      'Authorization': 'Bearer VbkokAqv7FIuyGQyAIzby2k7N_x7jEpphENuKFAlXtvmMUaeggk1o0DSgPyaK8zSlmswYjx8ZKbnlgtOKCQ733_91mOP-WwQsFpOB7dRkTL_Tlt6tkEFwKLXYkvkY3Yx', 
+      'Content-Type': 'application/json'    
+    }
+     })
+        .then(response => {
+          return response.json()
+        })
+      .then(data => {
+          console.log(data)
+        })
+    }
+
+
+
 
   return (
     <div>
