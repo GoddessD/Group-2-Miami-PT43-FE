@@ -33,26 +33,44 @@ const Generator = () => {
 
   console.log("first", items)
 
-  const test = async () => {
-    const data = await axios
-      .get(
-        `${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=usa`,
-        {
-          headers: {
-            Authorization: `Bearer VbkokAqv7FIuyGQyAIzby2k7N_x7jEpphENuKFAlXtvmMUaeggk1o0DSgPyaK8zSlmswYjx8ZKbnlgtOKCQ733_91mOP-WwQsFpOB7dRkTL_Tlt6tkEFwKLXYkvkY3Yx`,
-          },
-          params: {
-            term: 'restaurants',
-          },
-        },
-      )
+  const fetchRequest = async () => {
+    const options = {
+      method: 'GET',
+      url: 'https://local-business-data.p.rapidapi.com/search-nearby',
+      params: {
+        query: 'restaurant',
+        lat: '25.7907',
+        lng: '-80.13',
+        limit: '1',
+        region:'us',
+        language: 'en'
+      },
+      Headers: {
+        'X-RapidAPI-Key': 'f2eb43b58fmsh77530a1e0ca0525p164067jsn27fc742d174f',
+        'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
+        'Access-Control-Allow-Origin': '*'
 
-      .then(json => {
-        setItems({ items: json.data.businesses });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      }
+    };
+    axios.request(options)
+    .then(function (response) {
+      console.log(response.data);
+      
+    })
+    .then(result=>{
+      const res= Object.values(result)
+      const res2= res[0]
+      //sets the restaurant decription to name
+      setRestaurantDescription(res2.data[0].name)
+      //sets the restaurant photo
+      //sets the restaurant photo
+
+      console.log('resdescript',restaurantDescription)
+    })
+    
+    .catch(function (error) {
+      console.error(error);
+    });
   };
 
 
@@ -72,12 +90,12 @@ const Generator = () => {
 
   const restaurantGenerate = () => {
     setDisplay(false)
+    fetchRequest();
     console.log('Restaurant has been generated')
   }
 
   const activityGenerate = () => {
     setDisplay2(false)
-    test();
     console.log('Activity has been generated')
   }
 
