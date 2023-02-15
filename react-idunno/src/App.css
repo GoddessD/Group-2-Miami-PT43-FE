@@ -65,7 +65,7 @@ img.navbar-logo {
   float: left;
 }
 
-  img {
+img {
     height: 300px;
     width: 300px;
     float: right;
@@ -165,10 +165,6 @@ button {
   box-shadow: 0px 0px 5px #ccc;
 }
 
-.btn-primary:hover {
-  background-color: #2b6da9;
-}
-
 .center-left {
   float: left;
   display:block;
@@ -189,6 +185,7 @@ button {
 .Card {
   display: flex;  
   flex-direction: row;
+  justify-content: center;
 }
 .center-left {
   float: left;
@@ -196,6 +193,40 @@ button {
   padding: 0;
   margin:25px;
   background-color:black;
-  text-color: white; }
+  text-color: white; 
 }
 
+.Select,.Decide {
+  color: white;
+
+}
+
+.SelectButtons {
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+
+.selectedbuttons{
+  background: green;
+
+}
+
+.cardwidth {
+  max-width: 300px;
+  min-width: 300px;
+ 
+}
+
+.display {
+  display: none;
+}
+
+.display2 {
+  display: none;
+}
+
+.display3 {
+  display: none;
+}
