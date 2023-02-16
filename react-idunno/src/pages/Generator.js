@@ -7,19 +7,19 @@ import axios from "axios";
 
 
 const Generator = () => {
-  const [restaurantSaveButton, setRestaurantSaveButton] = useState('Save it')
+  const [restaurantSaveButton, setRestaurantSaveButton] = useState('Save it') // change to book now
   const [restaurantButton, setRestaurantButton] = useState('Find Restaurant')
   const [restaurantDescription, setRestaurantDescription] = useState('Description')
   const [restaurantTitle, setRestaurantTitle] = useState('Restaurant')
-  const [restaurantPicture, seRestaurantPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
+  const [restaurantPicture, setRestaurantPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
 
-  const [activitySaveButton, setActivitySaveButton] = useState('Save it')
+  const [activitySaveButton, setActivitySaveButton] = useState('Save it') //change to book now
   const [activityButton, setActivityButton] = useState('Find Activity')
   const [activityDescription, setActivityDescription] = useState('Description')
   const [activityTitle, setActivityTitle] = useState('Activity')
   const [activityPicture, setActivityPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
 
-  const [eventSaveButton, setSaveButton] = useState('Save it')
+  const [eventSaveButton, setSaveButton] = useState('Save it') //change to book now 
   const [eventButton, setEventButton] = useState('Find Event')
   const [eventDescription, setEventDescription] = useState('Description')
   const [eventTitle, setEventTitle] = useState('Event')
@@ -33,42 +33,82 @@ const Generator = () => {
 
   console.log("first", items)
 
-  const fetchRequest = async () => {
-    const options = {
-      method: 'GET',
-      url: 'https://local-business-data.p.rapidapi.com/search-nearby',
-      params: {
-        query: 'restaurant',
-        lat: '25.7907',
-        lng: '-80.13',
-        limit: '1',
-        region:'us',
-        language: 'en'
-      },
-      Headers: {
-        'X-RapidAPI-Key': 'f2eb43b58fmsh77530a1e0ca0525p164067jsn27fc742d174f',
-        'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
-        'Access-Control-Allow-Origin': '*'
+  const randomNumber = Math.floor(Math.random() * 3)
 
-      }
-    };
-    axios.request(options)
+
+  const fetchRequest = async () => { //restaurant card
+  const options = {
+  method: 'GET',
+  url: 'https://local-business-data.p.rapidapi.com/search-nearby',
+  params: {
+    query: 'Restaurant',
+    lat: '25.79',
+    lng: ' -80.13',
+    limit: '3',
+    language: 'en',
+    region: 'us'
+  },
+  headers: {
+    'X-RapidAPI-Key': '60e54d8e53msh1fcd4f2bc4a0dcep180d96jsnd5c814068d8b',
+    'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
+    'Access-Control-Allow-Origin': '*'
+  }
+};
+
+
+    axios.request(options) //restaurant card
     .then(function (response) {
       console.log(response.data);
-      
-    })
-    .then(result=>{
-      const res= Object.values(result)
-      const res2= res[0]
-      //sets the restaurant decription to name
-      setRestaurantDescription(res2.data[0].name)
-      //sets the restaurant photo
-      //sets the restaurant photo
-
-      console.log('resdescript',restaurantDescription)
+      const res= Object.values(response.data)
+      const res2= res[2]
+      console.log('res',res)
+      console.log('res2',res2)
+      setRestaurantTitle(res2[randomNumber].name)
+      setRestaurantDescription(res2[randomNumber].type) //add booking link use state to provide more info
+      setRestaurantPicture(res2[randomNumber].photos_sample[0].photo_url)
+      console.log('restaurant description', restaurantDescription)
+      console.log('restaurant photo', restaurantPicture)
     })
     
-    .catch(function (error) {
+    .catch((error) => {
+      console.error(error);
+    });
+  };
+
+  const fetchRequest2 = async () => { //activity card
+    const options2 = {
+    method: 'GET',
+    url: 'https://local-business-data.p.rapidapi.com/search-nearby',
+    params: {
+      query: 'fun activity',
+      lat: '25.79',
+      lng: ' -80.13',
+      limit: '3',
+      language: 'en',
+      region: 'us'
+    },
+    headers: {
+      'X-RapidAPI-Key': '60e54d8e53msh1fcd4f2bc4a0dcep180d96jsnd5c814068d8b',
+      'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
+      'Access-Control-Allow-Origin': '*'
+    }
+  };
+
+  axios.request(options2) //activity card
+    .then(function (response) {
+      console.log(response.data);
+      const res= Object.values(response.data)
+      const res2= res[2]
+      console.log('res',res)
+      console.log('res2',res2)
+      setRestaurantTitle(res2[randomNumber].name)
+      setRestaurantDescription(res2[randomNumber].type)
+      setRestaurantPicture(res2[randomNumber].photos_sample[0].photo_url)
+      console.log('activity description', restaurantDescription)
+      console.log('activity photo', restaurantPicture)
+    })
+    
+    .catch((error) => {
       console.error(error);
     });
   };
@@ -90,12 +130,13 @@ const Generator = () => {
 
   const restaurantGenerate = () => {
     setDisplay(false)
-    fetchRequest();
+    fetchRequest(); //changes the query fetch request 
     console.log('Restaurant has been generated')
   }
 
   const activityGenerate = () => {
     setDisplay2(false)
+    fetchRequest2(); //changes the query fetch request
     console.log('Activity has been generated')
   }
 
