@@ -1,49 +1,46 @@
 import React from 'react';
-import "../App.css"
+import "../contact.css"
 
 
 
 const ContactUs = () => {
   return (
 
-    <><div className='container-left'>
-      <div classname='contact-container'>
-        <div className='Title'><h1>Contact Us</h1></div>
+    <><div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1> Contact Us</h1>
+        <h4>Get in touch</h4>
+<br />
+<br/>
+        <p><i class="fa-solid fa-envelope"></i> admin@idunno.com</p>
+        
+        <p><i class="fa-solid fa-phone-volume"></i> 1-888-843-2378 (THE BEST)</p>
 
+        <p><i class="fa-solid fa-location-dot"> 111 NE 1st Street,Miami, FL 33132</i></p>
+      </div>
+           <div class="col-sm">
+           <form class="row g-3">
+  <div class="col-auto">
+    <label for="staticEmail2" class="visually-hidden">Email</label>
+    <input type="text"  class="form-control" id="staticEmail2" placeholder="email@example.com" />
+  </div>
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password" />
+  </div>
+  </form>
+<div class="mb-3">
+    <textarea rows="5" style={{height:"20%",width:"70%",marginTop:"5%", marginRight:"23%"}}></textarea>
+</div>
+<div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" style={{marginLeft:"-18%"}}>Send</button>
+  </div>
+      </div>
+    </div>
+  </div>
 
-        <div className='Address'><h8><i class="fa-solid fa-location-dot"> 111 NE 1st Street,Ste 808,Miami, FL 33132</i></h8></div>
-
-        <div className='OfficeNumber'><h5><i class="fa-solid fa-phone-volume"></i> 1-888-843-2378 (THE BEST)</h5></div>
-
-        <div className='workemail'><h5><i class="fa-solid fa-envelope"></i> admin@idunno.com</h5></div>
-
-        <div className='Website'><h5><i class="fa-sharp fa-solid fa-globe"></i> https://www.idunno.com/</h5></div>
-      </div></div>
-
-      <div classname="contact-form">
-        <form>
-          <div class="name">
-            <label for="InputName">Full Name*</label>
-            <input type="name" class="form-control" id="InputName" placeholder="Name" />
-          </div>
-          <div class="email">
-            <label for="exampleInputEmail1">Email Address*</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-          </div>
-          <div class="phone-number">
-            <label for="exampleInputPassword1">Phone Number</label>
-            <input type="phonenumber" class="form-control" id="InputPhoneNumber" placeholder="Phone Number" />
-          </div>
-          <div class="message">
-            <label for="exampleInputPassword1 form-control">Message*</label>
-            <input type="message" class="form-control" id="InputMessage" placeholder="Message" />
-          </div>
-          <div>
-            <button type="button">Click Me</button>
-          </div>
-        </form>
-        </div>
-
+    
     </>
   );
   };

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: blue;
+  background-color: rgb(32, 32, 107);
   
 }
 
@@ -130,12 +130,12 @@ button {
   margin-bottom: 20px;
 }
 
-.form-control {
+/* .form-control {
   border-radius: 5px;
   border: none;
   padding: 10px;
   box-shadow: inset 0px 0px 5px #ccc;
-}
+} */
 
 .form-text {
   font-size: 12px;
@@ -169,38 +169,7 @@ button {
   background-color: #2b6da9;
 }
 
-.container-left contact-container {
-  float:left;
-  display:inline block;
-  padding: 75;
-  margin:75;
-  width: 0%;
-  height:100%;
-  text-align: left;
-  text-decoration-color: black; 
-  border-radius: 75px;
-  display: left;
-  justify-content: left;
-  align-items: left;
-  flex-direction: ;
-  background-color:white;
-  font-style: initial;
-  background-repeat:no-repeat;
- background-size: 50%;
- align-items: left;
 
-}
-
-.contact-form  {
-  width: 50%;
-  height: 50%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin: 0 auto;
-  margin-top: 40px;
-  background-color: #333;
-  align-items: right;
-}
 
 .Card {
   display: flex;  
