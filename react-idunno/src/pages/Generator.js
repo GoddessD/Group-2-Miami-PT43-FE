@@ -7,27 +7,27 @@ import axios from "axios";
 
 
 const Generator = () => {
-  const [restaurantSaveButton, setRestaurantSaveButton] = useState('Save it') // change to book now
-  const [restaurantButton, setRestaurantButton] = useState('Find Restaurant')
-  const [restaurantDescription, setRestaurantDescription] = useState('Description')
-  const [restaurantTitle, setRestaurantTitle] = useState('Restaurant')
+  const [restaurantSaveButton, setRestaurantSaveButton] = useState('Book Now') // change to book now
+  const [restaurantButton, setRestaurantButton] = useState('Lets Grab a Bite')
+  const [restaurantDescription, setRestaurantDescription] = useState()
+  const [restaurantTitle, setRestaurantTitle] = useState()
   const [restaurantPicture, setRestaurantPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
 
-  const [activitySaveButton, setActivitySaveButton] = useState('Save it') //change to book now
-  const [activityButton, setActivityButton] = useState('Find Activity')
-  const [activityDescription, setActivityDescription] = useState('Description')
-  const [activityTitle, setActivityTitle] = useState('Activity')
+  const [activitySaveButton, setActivitySaveButton] = useState('Book Now') //change to book now
+  const [activityButton, setActivityButton] = useState('Lets Have Some Fun')
+  const [activityDescription, setActivityDescription] = useState()
+  const [activityTitle, setActivityTitle] = useState()
   const [activityPicture, setActivityPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
 
-  const [eventSaveButton, setSaveButton] = useState('Save it') //change to book now 
-  const [eventButton, setEventButton] = useState('Find Event')
-  const [eventDescription, setEventDescription] = useState('Description')
-  const [eventTitle, setEventTitle] = useState('Event')
-  const [eventPicture, setEventPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
+  // const [eventSaveButton, setSaveButton] = useState('Save it') //change to book now 
+  // const [eventButton, setEventButton] = useState('Find Event')
+  // const [eventDescription, setEventDescription] = useState('Description')
+  // const [eventTitle, setEventTitle] = useState('Event')
+  // const [eventPicture, setEventPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
 
   const [display, setDisplay] = useState('none')
   const [display2, setDisplay2] = useState('none')
-  const [display3, setDisplay3] = useState('none')
+  // const [display3, setDisplay3] = useState('none')
 
   const [items, setItems] = useState('test')
 
@@ -101,9 +101,10 @@ const Generator = () => {
       const res2= res[2]
       console.log('res',res)
       console.log('res2',res2)
-      setRestaurantTitle(res2[randomNumber].name)
-      setRestaurantDescription(res2[randomNumber].type)
-      setRestaurantPicture(res2[randomNumber].photos_sample[0].photo_url)
+      setActivityTitle(res2[randomNumber].name)
+      setActivityDescription(res2[randomNumber].type)
+      setActivityPicture(res2[randomNumber].photos_sample[0].photo_url)
+      // setRestaurantButton(res2[randomNumber].website)
       console.log('activity description', restaurantDescription)
       console.log('activity photo', restaurantPicture)
     })
@@ -116,9 +117,9 @@ const Generator = () => {
 
 
 
-  const eventSaveIt = () => {
-    console.log('Event has been saved')
-  }
+  // const eventSaveIt = () => {
+  //   console.log('Event has been saved')
+  // }
 
   const activitySaveIt = () => {
     console.log('Activity has been saved')
@@ -140,10 +141,10 @@ const Generator = () => {
     console.log('Activity has been generated')
   }
 
-  const eventGenerate = () => {
-    setDisplay3(false)
-    console.log('Event has been generated')
-  }
+  // const eventGenerate = () => {
+  //   setDisplay3(false)
+  //   console.log('Event has been generated')
+  // }
 
   const familyCategory = () => {
     console.log('Family category has been selected')
@@ -179,7 +180,7 @@ const Generator = () => {
       <div className="Card">
         <Card src={restaurantPicture} title={restaurantTitle} description={restaurantDescription} button1={restaurantButton} generate={restaurantGenerate} display={display} button2={restaurantSaveButton} saveIt={restaurantSaveIt} />
         <Card display={display2} src={activityPicture} title={activityTitle} description={activityDescription} button1={activityButton} generate={activityGenerate} button2={activitySaveButton} saveIt={activitySaveIt} />
-        <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} />
+        {/* <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} /> */}
       </div>
     </div>
   );
