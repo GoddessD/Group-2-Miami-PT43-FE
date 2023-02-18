@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../App.css"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [values, setValues] = useState({
@@ -8,6 +9,10 @@ function Login() {
     password:""
    
   });
+
+  const[token,setToken]=useState("")
+
+   const navigate = useNavigate()
   
    const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,37 +32,23 @@ function Login() {
       }
     }
     
-      await axios.post(`https://3001-goddessd-group2miamipt4-pc4ka7rljyq.ws-us85.gitpod.io/api/login`, userData,options)
+      await axios.post(`https://3001-goddessd-group2miamipt4-pc4ka7rljyq.ws-us87.gitpod.io/api/login`, userData,options)
       .then(res => {
+        window.localStorage.setItem("token",res.data.token)
+        setToken(res.data.token)
         console.log(res.data);
+        navigate('/generator');
       })
 
-      .then(data => {
-        localStorage.setItem("token", data.token)
-      })
+      
   
       .catch(err => {
         console.error(err);
       });
 
 
-      function getToken(){
-
-        const token = localStorage.getItem("token");
-        console.log("token",token)
-        if (token=== null ){
-          return undefined
-        }
-        return token
-
-
-
+     
       }
-
-      getToken()
-
-      
-    }
 
     
     

@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import "../App.css"
 import Card from "../component/Card";
 
@@ -11,8 +12,8 @@ import Card from "../component/Card";
 //
 
 const Generator = () => {
-  return (
-    <div>
+  return localStorage.token ? (
+<div>
       <h1>Let us decide</h1>
       <h2>Step 1: Select perfered category</h2>
       <button type="button" class="btn btn-primary btn-lg m-2">Family</button>
@@ -28,6 +29,8 @@ const Generator = () => {
       <Card />
       </div>
     </div>
+  ): (
+    <Navigate to='/home'/>
   );
 };
 
