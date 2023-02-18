@@ -162,6 +162,29 @@ const Generator = () => {
     console.log('Rolling Solo category has been selected')
   }
 
+  // if category button is not selected 
+  // then card button is false 
+
+  // if category button is selected
+  // then card button is true
+
+  const [firstButtonPressed, setFirstButtonPressed] = useState(false);
+  const [secondButtonPressed, setSecondButtonPressed] = useState(false);
+
+  const handleFirstButtonClick = () => {
+    setFirstButtonPressed(true);
+    // alert('First button click.');
+  }
+
+  const handleSecondButtonClick = () => {
+    if (firstButtonPressed) {
+      setSecondButtonPressed(true);
+    } else {
+      alert("Please select a category first.");
+    }
+
+  }
+
   return (
     <div>
       <h1 className="Decide">Let us decide</h1>
@@ -169,21 +192,26 @@ const Generator = () => {
         Step 1: Select perfered category
       </h2>
       <div className="SelectButtons">
-        <SelectButtons button={'Family'} categorySelection={familyCategory} />
-        <SelectButtons button={'Friends'} categorySelection={friendsCategory} />
-        <SelectButtons button={'Date Night'} categorySelection={dateNightCategory} />
-        <SelectButtons button={'Rolling Solo'} categorySelection={rollingSoloCategory} />
+        <SelectButtons button={'Family'} categorySelection={familyCategory} firstButtonPressed={handleFirstButtonClick} />
+        <SelectButtons button={'Friends'} categorySelection={friendsCategory} firstButtonPressed={handleFirstButtonClick} />
+        <SelectButtons button={'Date Night'} categorySelection={dateNightCategory} firstButtonPressed={handleFirstButtonClick} />
+        <SelectButtons button={'Rolling Solo'} categorySelection={rollingSoloCategory} firstButtonPressed={handleFirstButtonClick} />
       </div>
+      
+
+      
       <h2 className="Select">
         Step 2: Select your adventure!
       </h2>
       <div className="Card">
-        <Card src={restaurantPicture} title={restaurantTitle} description={restaurantDescription} button1={restaurantButton} generate={restaurantGenerate} display={display} button2={restaurantSaveButton} saveIt={restaurantSaveIt} />
-        <Card display={display2} src={activityPicture} title={activityTitle} description={activityDescription} button1={activityButton} generate={activityGenerate} button2={activitySaveButton} saveIt={activitySaveIt} />
+        <Card src={restaurantPicture} title={restaurantTitle} description={restaurantDescription} button1={restaurantButton} generate={restaurantGenerate} display={display} button2={restaurantSaveButton} saveIt={restaurantSaveIt} secondButtonPressed ={handleSecondButtonClick} />
+        <Card display={display2} src={activityPicture} title={activityTitle} description={activityDescription} button1={activityButton} generate={activityGenerate} button2={activitySaveButton} saveIt={activitySaveIt} secondButtonPressed ={handleSecondButtonClick} />
         {/* <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} /> */}
       </div>
     </div>
   );
 };
+
+
 
 export default Generator;

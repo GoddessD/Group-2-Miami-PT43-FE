@@ -3,7 +3,7 @@ import "../App.css"
 import { useState } from "react";
 
 
-function SelectButtons ({button,categorySelection}){
+function SelectButtons ({button,categorySelection,firstButtonPressed}){
     const [active,setActive] = useState(false);
     const handleClick = () => {
         setActive(!active);
@@ -11,7 +11,7 @@ function SelectButtons ({button,categorySelection}){
     
     return(
         <div>
-        <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick()}}>{button}</button></div>
+        <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick();firstButtonPressed()}}>{button}</button></div>
         </div>
     
     
