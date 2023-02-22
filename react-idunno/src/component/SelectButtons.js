@@ -11,12 +11,12 @@ function SelectButtons ({button,categorySelection,firstButtonPressed}){
     
     return(
         <div>
-        <div><button type="button" className={active ? "selectedbuttons" : ""}  onClick={()=> {categorySelection(); handleClick();firstButtonPressed()}}>{button}</button></div>
+        <div><button type="button" className={active ? "myButton2" : "myButton"} onClick={()=> {categorySelection(); handleClick();firstButtonPressed()}} >{button}</button></div>
         </div>
-    
-    
     );
 };
 
 export default SelectButtons;
 
+
+//{active ? "selectedbuttons" : ""}

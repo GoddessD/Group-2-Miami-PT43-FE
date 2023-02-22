@@ -11,13 +11,13 @@ const Generator = () => {
   const [restaurantButton, setRestaurantButton] = useState('Lets Grab a Bite')
   const [restaurantDescription, setRestaurantDescription] = useState()
   const [restaurantTitle, setRestaurantTitle] = useState()
-  const [restaurantPicture, setRestaurantPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
+  const [restaurantPicture, setRestaurantPicture] = useState('https://i.pinimg.com/originals/ee/1d/08/ee1d081c5bdf966b058c1a6588e73e8a.gif')
 
   const [activitySaveButton, setActivitySaveButton] = useState('Book Now') //change to book now
   const [activityButton, setActivityButton] = useState('Lets Have Some Fun')
   const [activityDescription, setActivityDescription] = useState()
   const [activityTitle, setActivityTitle] = useState()
-  const [activityPicture, setActivityPicture] = useState('https://cdn3.vectorstock.com/i/1000x1000/63/82/person-silhouette-with-question-mark-vector-13296382.jpg')
+  const [activityPicture, setActivityPicture] = useState('https://i.gifer.com/4Xgf.gif')
 
   // const [eventSaveButton, setSaveButton] = useState('Save it') //change to book now 
   // const [eventButton, setEventButton] = useState('Find Event')
@@ -104,7 +104,7 @@ const Generator = () => {
       setActivityTitle(res2[randomNumber].name)
       setActivityDescription(res2[randomNumber].type)
       setActivityPicture(res2[randomNumber].photos_sample[0].photo_url)
-      // setRestaurantButton(res2[randomNumber].website)
+      setActivitySaveButton(res2[randomNumber].website)
       console.log('activity description', restaurantDescription)
       console.log('activity photo', restaurantPicture)
     })
@@ -148,18 +148,22 @@ const Generator = () => {
 
   const familyCategory = () => {
     console.log('Family category has been selected')
+    alert('You selected Family move to step 2')
   }
 
   const friendsCategory = () => {
     console.log('Friends category has been selected')
+    alert('You selected Friends move to step 2')
   }
 
   const dateNightCategory = () => {
     console.log('Date Night category has been selected')
+    alert('You selected Date Night move to step 2')
   }
 
   const rollingSoloCategory = () => {
     console.log('Rolling Solo category has been selected')
+    alert('You selected Rolling Solo move to step 2')
   }
 
   // if category button is not selected 
