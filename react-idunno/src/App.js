@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 import SignUp from './pages/SignUp';
 import Generator from './pages/Generator';
 import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
 					<Routes>
 						<Route exact path="/signup"element={<SignUp/>}/ >
             <Route exact path="/login"element={<LogIn/>}/ > 
-            <Route exact path="/home"element={<Home/>}/ >
+            <Route exact path="/"element={<Home/>}/ >
+            <Route exact path="/about"element={<AboutUs/>}/>	
             <Route exact path="/generator"element={<Generator/>}/>		
-            <Route exact path="/contactus"element={<ContactUs/>}/>	
+            <Route exact path="/contact"element={<ContactUs/>}/>	
 						</Routes>
 					
 				
