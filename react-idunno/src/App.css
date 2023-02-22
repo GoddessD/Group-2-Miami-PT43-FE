@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(32, 32, 107);
+  background-color: rgb(purple);
   
 }
 
@@ -71,6 +71,10 @@ img.navbar-logo {
     float: right;
   }
 
+  .img-carousel{
+    width: 10%;
+    height: 10%;
+  }
 
 .div.button-container {
   
