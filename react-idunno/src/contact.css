@@ -1,0 +1,29 @@
+input[type=text]{
+margin-left:10%;
+margin-top:100px;
+}
+
+input[type=password]{
+    margin-left:20%;
+    margin-top:100px;
+    }
+
+h1{
+color:white;
+text-align: left;
+}
+
+h4{
+    color:white;
+    margin-top: 15%;
+    text-align: left;
+}
+ 
+p{color:white;
+    text-align: left;
+}
+
+.container {
+    background-image:url(https://t4.ftcdn.net/jpg/02/98/06/69/360_F_298066929_M9qgNMr3OJWo6H2GebpA5zOYxN2CphV1.jpg);
+    background-size:cover
+}

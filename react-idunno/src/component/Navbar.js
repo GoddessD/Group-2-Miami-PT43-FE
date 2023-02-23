@@ -2,7 +2,7 @@ import React from 'react';
 //import Container from 'react-bootstrap/Container';
 //import Nav from 'react-bootstrap/Nav';
 //import Navbar from 'react-bootstrap/Navbar';
-import {Link}from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Home from '../pages/Home';
 
 
@@ -10,7 +10,6 @@ import Home from '../pages/Home';
 const Navbar = () => {
   return (
     <div>
-
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid ">
           <Link className="navbar-brand" to="/">
@@ -21,7 +20,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse nav-names" id="navbarNav">
             <ul className="navbar-nav justify-content-center">
               <li className="nav-item">
-                <Link className="nav-link" to="/home">Home</Link>
+                <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About Us</Link>
@@ -33,21 +32,21 @@ const Navbar = () => {
                 <Link className="nav-link" to="/contact">Contact Us</Link>
               </li>
             </ul>
-            
+
           </div>
           <div className="button-container justify-content-end ">
-              <ul>
-                <Link to="/login">
-                  <button type="button" className="btn btn-primary">LOG IN</button>
-                </Link>
-                <Link to="/signup">
-                  <button type="button" className="btn btn-primary">SIGN UP</button>
-                </Link>
-              </ul>
-            </div>
+            <ul>
+              <Link to="/login">
+                <button type="button" className="btn btn-primary">LOG IN</button>
+              </Link>
+              <Link to="/signup">
+                <button type="button" className="btn btn-primary">SIGN UP</button>
+              </Link>
+            </ul>
           </div>
-          </nav>
+        </div>
 
+      </nav>
     </div>
   );
 };
