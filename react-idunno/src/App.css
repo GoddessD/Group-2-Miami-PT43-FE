@@ -65,7 +65,7 @@ img.navbar-logo {
   float: none;
 }
 
-  img {
+img {
     height: 300px;
     width: 300px;
     float: right;
@@ -169,9 +169,21 @@ button {
   box-shadow: 0px 0px 5px #ccc;
 }
 
+
+.center-left {
+  float: left;
+  display:block;
+  padding: 0;
+  margin:25px;
+  background-color:black;
+  text-color: white;
+}
+
 .btn-primary:hover {
   background-color: #2b6da9;
 }
+
+
 
 
 
@@ -180,16 +192,65 @@ button {
   flex-direction: row;
 }
 
+
 .center-left {
   float: left;
   display:block;
   padding: 0;
   margin:25px;
   background-color:black;
+
+  text-color: white; 
+}
+
+.Select,.Decide {
+  color: white;
+
+}
+
+.SelectButtons {
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+
+.selectedbuttons{
+  background: green;
+
+}
+
+.display {
+  display: none;
+}
+
+.display2 {
+  display: none;
+}
+
+.display3 {
+  display: none;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 53px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+
   color: white; }
 
 
-  .carousel-indicators .active {
+.carousel-indicators .active {
     opacity: 1;
 }
 
@@ -216,7 +277,105 @@ overflow: hidden
 
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
   display: block;
+
 }
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.myButton2 {
+	box-shadow:inset 0px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #66f894 5%, #11b043 100%);
+	background-color:#11b043;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 53px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+}
+
+.myButton2:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.myButton3 {
+	box-shadow:inset 9px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 68px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+}
+.myButton3:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
+
+.Card {
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  
+    
+}
+
+
+.cardwidth {
+  max-width: 300px;
+  min-width: 300px;
+ 
+}
+
+.booknow {
+    box-shadow:inset 0px 1px 0px 0px #efdcfb;
+    background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+    background-color:#dfbdfa;
+    border-radius:6px;
+    border:1px solid #c584f3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    font-style:italic;
+    padding:6px 9px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #9752cc;
+    margin-top: 2px;
+  }
+.booknow:hover {
+    background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+    background-color:#bc80ea;
+  }
+.booknow:active {
+    position:relative;
+    top:1px;
+  }
 
 .carousel-item {
   height: 32rem;
