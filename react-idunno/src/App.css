@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: blue;
+  background-color: rgb(purple);
   
 }
 
@@ -55,14 +55,14 @@ img.navbar-logo {
   font-weight: bold;
   padding: 20px;
   color: gold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier New, Courier, monospace,
 
   
 }
 
 .main-content {
   display: inline-block;
-  float: left;
+  float: none;
 }
 
 img {
@@ -71,6 +71,10 @@ img {
     float: right;
   }
 
+  .img-carousel{
+    width: 10%;
+    height: 10%;
+  }
 
 .div.button-container {
   
@@ -107,7 +111,7 @@ button {
 .submit-button {
   width: 300px;
   background-color: #4CAF50;
-  color:
+  color:rgb(3, 3, 29);
 }
 
 .button-container.right {
@@ -130,12 +134,12 @@ button {
   margin-bottom: 20px;
 }
 
-.form-control {
+/* .form-control {
   border-radius: 5px;
   border: none;
   padding: 10px;
   box-shadow: inset 0px 0px 5px #ccc;
-}
+} */
 
 .form-text {
   font-size: 12px;
@@ -165,6 +169,7 @@ button {
   box-shadow: 0px 0px 5px #ccc;
 }
 
+
 .center-left {
   float: left;
   display:block;
@@ -174,13 +179,19 @@ button {
   text-color: white;
 }
 
-.appcover {
-  border-color: black;
-  float: right;
-  display:block;
-  padding: 0;
-  margin:25px;
+.btn-primary:hover {
+  background-color: #2b6da9;
 }
+
+
+
+
+
+.Card {
+  display: flex;  
+  flex-direction: row;
+}
+
 
 .center-left {
   float: left;
@@ -188,6 +199,7 @@ button {
   padding: 0;
   margin:25px;
   background-color:black;
+
   text-color: white; 
 }
 
@@ -234,6 +246,38 @@ button {
 	padding:13px 53px;
 	text-decoration:none;
 	text-shadow:1px 3px 0px #9752cc;
+
+  color: white; }
+
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-indicators {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 2;
+display: flex;
+justify-content: center;
+padding: 0;
+margin-right: 15%;
+margin-bottom: 1rem;
+margin-left: 15%;
+list-style: none
+}
+
+.carousel-inner {
+  position: relative;
+width: 100%;
+overflow: hidden
+}
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: block;
+
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
@@ -333,3 +377,74 @@ button {
     top:1px;
   }
 
+.carousel-item {
+  height: 32rem;
+  position: relative;
+display: none;
+float: left;
+width: 100%;
+margin-right: -100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+transition: transform .6s ease-in-out
+}
+
+.carousel-control-prev {
+  left:0;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+top: 0;
+bottom: 0;
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 15%;
+padding: 0;
+color: #fff;
+text-align: center;
+background: 0 0;
+border: 0;
+opacity: .5;
+transition: opacity .15s ease
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit
+}
+
+.button {
+  border-radius: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.carousel-control-next-icon {
+  background-image: url(https://loremflickr.com/g/320/240/topevents);
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width:2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+
+}
