@@ -4,14 +4,8 @@
   
 }
 
-.container-fluid{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
 .App-header {
-  background-color:pink;
+  background-color: pink;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,17 +15,33 @@
   color: pink;
 }
 
+.container-fluid {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.center-button {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
 
 .navbar {
-  color :white;
+  color: white;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 img.navbar-logo {
-  width:150px;
-  height: 150px;
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .navbar-brand {
@@ -40,11 +50,18 @@ img.navbar-logo {
 
 }
 
+.nav-names {
+  justify-content: center;
+
+}
+
+
+
 .left-container {
   float: center;
-  display:block;
+  display: block;
   padding: 0;
-  margin:25px;
+  margin: 25px;
 }
 
 
@@ -77,19 +94,17 @@ img {
   }
 
 .div.button-container {
-  
   justify-content: flex-end;
   padding-left: 20%;
-
-  }
-button {
-  margin-left:10px;
-  margin-right: 10px;
-}  
-
-.custom-color{
-  background-color: rgb(194, 152, 75);
+  float: right;
 }
+
+
+button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 
 .login-form {
@@ -115,23 +130,38 @@ button {
 }
 
 .button-container.right {
-  position: absolute; /*
+  position: absolute;
+  /*
   right: 0;
 }
 
 
 .login-form {
   width: 300px; /* adjust width as needed */
-  height: 300px; /* add a fixed height */
+  height: 300px;
+  /* add a fixed height */
   margin: 0 auto;
   padding: 20px;
-  border-radius: 10px; /* round the corners */
+  border-radius: 10px;
+  /* round the corners */
   box-shadow: 0px 0px 10px #ccc;
   background-color: #fafafa;
 }
 
 .form-group {
   margin-bottom: 20px;
+  color: white;
+}
+
+.form-box {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #333;
+  
 }
 
 /* .form-control {
@@ -143,7 +173,7 @@ button {
 
 .form-text {
   font-size: 12px;
-  color: #333;
+  color: rgb(248, 244, 244);
 }
 
 .form-check-input {
@@ -153,7 +183,7 @@ button {
 
 .form-check-label {
   font-size: 14px;
-  color: #333;
+  color:white;
   margin-left: 10px;
 }
 
@@ -172,12 +202,136 @@ button {
 
 .center-left {
   float: left;
-  display:block;
+  display: block;
   padding: 0;
-  margin:25px;
-  background-color:black;
-  text-color: white;
+  margin: 25px;
+  background-color: black;
 }
+
+.appcover {
+  border-color: black;
+  float: right;
+  display: block;
+  padding: 0;
+  margin: 25px;
+  
+}
+
+
+button {
+  margin-top: 20px;
+  margin-left: 0;
+  padding:  20px;
+  font-size: 20px;
+}
+
+.header-container {
+  float: left;
+}
+
+.image-wrapper {
+  float: right;
+  color: #ccc;
+}
+
+.image-container {
+  
+  background-image: url('../public/purple background.png');
+}
+
+.main-content {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+
+
+.header {
+  font-size: 120px;
+  color: white;
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  padding-left: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 20px;
+}
+
+h5 {
+
+  padding-top: 20px;
+  padding-left: 5px;
+
+}
+
+button{
+  padding-left: 20px;
+}
+
+
+
+.form-container {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: #333;
+  background-image: url('../public/purple background.png');
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(243, 235, 235);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.form-background {
+  background-image: url('../public/purple background.png');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-backgroundsu {
+ background-color: #333;
+}
+
+
+div.row {
+
+  border-spacing: 10px;
+  margin: 20px;
+
+}
+
+
+  
 
 .btn-primary:hover {
   background-color: #2b6da9;
@@ -200,7 +354,7 @@ button {
   margin:25px;
   background-color:black;
 
-  text-color: white; 
+color: white; 
 }
 
 .Select,.Decide {

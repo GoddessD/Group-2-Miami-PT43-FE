@@ -1,9 +1,11 @@
-import React from 'react';
+import React  from 'react';
+import "../App.css"
 
 
 
 const AboutUs = () => {
   return (
+
 
     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-indicators">
@@ -59,5 +61,6 @@ const AboutUs = () => {
        
     );
     };
+
 
 export default AboutUs;

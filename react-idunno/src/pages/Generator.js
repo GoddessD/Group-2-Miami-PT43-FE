@@ -213,7 +213,10 @@ const Generator = () => {
         {/* <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} /> */}
       </div>
     </div>
-  );
+  )
+  // : (
+  //   <Navigate to='/home'/>
+  // );
 };
 
 
