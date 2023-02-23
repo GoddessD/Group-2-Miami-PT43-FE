@@ -223,7 +223,8 @@ button {
 }
 
 .image-container {
-  background-color:#333 ;
+  
+  background-image: url('../public/purple background.png');
 }
 
 .main-content {
@@ -277,7 +278,7 @@ button{
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   background-color: #333;
-  background-image: url('../public/compbg.jpg');
+  background-image: url('../public/purple background.png');
 }
 
 .form-control {
@@ -297,7 +298,7 @@ button{
 }
 
 .form-background {
-  background-image: url('../public/compbg.jpg');
+  background-image: url('../public/purple background.png');
   background-size: cover;
   height: 100vh;
   display: flex;

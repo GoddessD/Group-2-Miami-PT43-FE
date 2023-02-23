@@ -22,7 +22,7 @@ const SignUp = () => {
     event.preventDefault();
 
 
-    await axios.post(`https://3001-goddessd-group2miamipt4-pc4ka7rljyq.ws-us87.gitpod.io/api/signup`, userData, options)
+    await axios.post(`https://3001-goddessd-group2miamipt4-pc4ka7rljyq.ws-us87.gitpod.io`, userData, options)
     .then(res => {
       console.log(res.data);
       navigate('/login');

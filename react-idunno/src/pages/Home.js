@@ -15,7 +15,7 @@ const Home = () => {
             From planning an outdoor activity to
             a day of self care generated for you, our website offers <br />detailed daily plans selections tailored
             to your location. Get ready! idunno makes sure your day is <br />enjoyable.Start planning now on our website!!!</h5>
-          <Link to="/generator">
+          <Link to="/login">
             <button type="button" class="btn btn-danger">MAKE MY PLANS</button>
           </Link>
         </h1>
