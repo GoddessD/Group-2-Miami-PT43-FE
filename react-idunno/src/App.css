@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+
 .App {
   text-align: center;
   background-color: rgb(purple);
@@ -176,16 +179,11 @@ button {
   padding: 0;
   margin:25px;
   background-color:black;
-  text-color: white;
 }
 
 .btn-primary:hover {
   background-color: #2b6da9;
 }
-
-
-
-
 
 .Card {
   display: flex;  
@@ -199,7 +197,6 @@ button {
   padding: 0;
   margin:25px;
   background-color:black;
-
   text-color: white; 
 }
 
@@ -213,6 +210,7 @@ button {
   position: relative;
   margin: auto;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .selectedbuttons{
@@ -335,10 +333,11 @@ overflow: hidden
 	top:1px;
 }
 
-.Card {
+.GCard {
   display: flex;  
   flex-direction: row;
   justify-content: center;
+  margin-top: 10px;
   
     
 }
@@ -447,4 +446,97 @@ line-height: inherit
   overflow-clip-margin: content-box;
   overflow: clip;
 
+}
+
+.Decide{
+  color: #fff04a;
+  justify-content: center;
+  display: flex;
+  font-family: 'Gajraj One', cursive;
+  font-size: 65px;
+}
+
+.Select{
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  position: relative;
+	letter-spacing: 5px;
+	color: #753e9e;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect : below 1px linear-gradient(transparent , #0004);
+	line-height: 0.70em;
+	outline: none;
+	animation: animate 3s linear infinite;
+}
+
+.Generator{
+  background: #753e9e;
+}
+
+.Select2{
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  position: relative;
+	letter-spacing: 5px;
+	color: #753e9e;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect : below 1px linear-gradient(transparent , #0004);
+	line-height: 0.70em;
+	outline: none;
+	animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+		color: #753e9e;
+		text-shadow: #ff0000;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+		color: #ff0000;
+		/* text-shadow: 0 0 10px #03bcf4,
+		            0 0 20px #03bcf4,
+		            0 0 40px #03bcf4,
+		            0 0 80px #03bcf4,
+		            0 0 160px #03bcf4; */
+
+	}
+}
+
+.card-text,.card-title{
+  color: #000000;
+  text-align: center;
+}
+
+.tryAgain{
+  box-shadow:inset 0px 1px 0px 0px #efdcfb;
+    background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+    background-color:#dfbdfa;
+    border-radius:6px;
+    border:1px solid #c584f3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    font-style:italic;
+    padding:6px 9px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #9752cc;
+    margin-top: 2px;
+}
+
+.tryAgain:hover {
+  background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+  background-color:#bc80ea;
+}
+.tryAgain:active {
+  position:relative;
+  top:1px;
 }

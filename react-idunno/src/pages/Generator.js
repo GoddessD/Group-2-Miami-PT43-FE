@@ -7,14 +7,16 @@ import axios from "axios";
 
 
 const Generator = () => {
+  const [restaurantButton2, setRestaurantButton2] = useState('Another One')
   const [restaurantSaveButton, setRestaurantSaveButton] = useState('Book Now') // change to book now
   const [restaurantButton, setRestaurantButton] = useState('Lets Grab a Bite')
   const [restaurantDescription, setRestaurantDescription] = useState()
   const [restaurantTitle, setRestaurantTitle] = useState()
   const [restaurantPicture, setRestaurantPicture] = useState('https://i.pinimg.com/originals/ee/1d/08/ee1d081c5bdf966b058c1a6588e73e8a.gif')
 
+  const [activityButton2, setActivityButton2] = useState('Another One')
   const [activitySaveButton, setActivitySaveButton] = useState('Book Now') //change to book now
-  const [activityButton, setActivityButton] = useState('Lets Have Some Fun')
+  const [activityButton, setActivityButton] = useState('Lets Have a Blast')
   const [activityDescription, setActivityDescription] = useState()
   const [activityTitle, setActivityTitle] = useState()
   const [activityPicture, setActivityPicture] = useState('https://i.gifer.com/4Xgf.gif')
@@ -44,12 +46,12 @@ const Generator = () => {
     query: 'Restaurant',
     lat: '25.79',
     lng: ' -80.13',
-    limit: '3',
+    limit: '5',
     language: 'en',
     region: 'us'
   },
   headers: {
-    'X-RapidAPI-Key': '60e54d8e53msh1fcd4f2bc4a0dcep180d96jsnd5c814068d8b',
+    'X-RapidAPI-Key': 'f60644a93cmshc187a5a56b78490p1945bajsn83619746a6ca',
     'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
     'Access-Control-Allow-Origin': '*'
   }
@@ -83,12 +85,12 @@ const Generator = () => {
       query: 'fun activity',
       lat: '25.79',
       lng: ' -80.13',
-      limit: '3',
+      limit: '5',
       language: 'en',
       region: 'us'
     },
     headers: {
-      'X-RapidAPI-Key': '60e54d8e53msh1fcd4f2bc4a0dcep180d96jsnd5c814068d8b',
+      'X-RapidAPI-Key': 'f60644a93cmshc187a5a56b78490p1945bajsn83619746a6ca',
       'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com',
       'Access-Control-Allow-Origin': '*'
     }
@@ -104,7 +106,6 @@ const Generator = () => {
       setActivityTitle(res2[randomNumber].name)
       setActivityDescription(res2[randomNumber].type)
       setActivityPicture(res2[randomNumber].photos_sample[0].photo_url)
-      setActivitySaveButton(res2[randomNumber].website)
       console.log('activity description', restaurantDescription)
       console.log('activity photo', restaurantPicture)
     })
@@ -135,10 +136,23 @@ const Generator = () => {
     console.log('Restaurant has been generated')
   }
 
+  const restaurantGenerate2 = () => {
+    setDisplay(false)
+    fetchRequest(); //changes the query fetch request 
+    console.log('New restaurant has been generated')
+  }
+  
+
   const activityGenerate = () => {
     setDisplay2(false)
     fetchRequest2(); //changes the query fetch request
     console.log('Activity has been generated')
+  }
+
+  const activityGenerate2 = () => {
+    setDisplay2(false)
+    fetchRequest2(); //changes the query fetch request
+    console.log('New activity has been generated')
   }
 
   // const eventGenerate = () => {
@@ -172,44 +186,27 @@ const Generator = () => {
   // if category button is selected
   // then card button is true
 
-  const [firstButtonPressed, setFirstButtonPressed] = useState(false);
-  const [secondButtonPressed, setSecondButtonPressed] = useState(false);
-
-  const handleFirstButtonClick = () => {
-    setFirstButtonPressed(true);
-    // alert('First button click.');
-  }
-
-  const handleSecondButtonClick = () => {
-    if (firstButtonPressed) {
-      setSecondButtonPressed(true);
-    } else {
-      alert("Please select a category first.");
-    }
-
-  }
-
   return (
-    <div>
-      <h1 className="Decide">Let us decide</h1>
+    <div className="Generator">
+      <h1 className="Decide">LET US DECIDE</h1>
       <h2 className="Select">
-        Step 1: Select perfered category
+        STEP 1: SELECT PREFFERED CATEGORY
       </h2>
-      <div className="SelectButtons">
-        <SelectButtons button={'Family'} categorySelection={familyCategory} firstButtonPressed={handleFirstButtonClick} />
-        <SelectButtons button={'Friends'} categorySelection={friendsCategory} firstButtonPressed={handleFirstButtonClick} />
-        <SelectButtons button={'Date Night'} categorySelection={dateNightCategory} firstButtonPressed={handleFirstButtonClick} />
-        <SelectButtons button={'Rolling Solo'} categorySelection={rollingSoloCategory} firstButtonPressed={handleFirstButtonClick} />
+      <div className="SelectButtons" contenteditable="false">
+        <SelectButtons button={'Family'} categorySelection={familyCategory}  />
+        <SelectButtons button={'Friends'} categorySelection={friendsCategory} />
+        <SelectButtons button={'Date Night'} categorySelection={dateNightCategory} />
+        <SelectButtons button={'Rolling Solo'} categorySelection={rollingSoloCategory} />
       </div>
       
 
       
-      <h2 className="Select">
-        Step 2: Select your adventure!
+      <h2 contenteditable="true" className="Select2">
+        STEP 2: SELECT ADVENTURE!
       </h2>
-      <div className="Card">
-        <Card src={restaurantPicture} title={restaurantTitle} description={restaurantDescription} button1={restaurantButton} generate={restaurantGenerate} display={display} button2={restaurantSaveButton} saveIt={restaurantSaveIt} secondButtonPressed ={handleSecondButtonClick} />
-        <Card display={display2} src={activityPicture} title={activityTitle} description={activityDescription} button1={activityButton} generate={activityGenerate} button2={activitySaveButton} saveIt={activitySaveIt} secondButtonPressed ={handleSecondButtonClick} />
+      <div className="GCard">
+        <Card src={restaurantPicture} title={restaurantTitle} description={restaurantDescription} button1={restaurantButton} button3={restaurantButton2} generate={restaurantGenerate} generate2={restaurantGenerate2} display={display} button2={restaurantSaveButton} saveIt={restaurantSaveIt} />
+        <Card display={display2} src={activityPicture} title={activityTitle} description={activityDescription} button1={activityButton} button3={activityButton2} generate={activityGenerate} generate2={activityGenerate2} button2={activitySaveButton} saveIt={activitySaveIt} />
         {/* <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} /> */}
       </div>
     </div>

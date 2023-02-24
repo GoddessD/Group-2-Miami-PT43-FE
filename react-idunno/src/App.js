@@ -10,13 +10,12 @@ import Generator from './pages/Generator';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 
-
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
 				<Navbar />
-					<Routes><<<<<<< jerry
+					<Routes>
 						<Route exact path="/signup"element={<SignUp/>}/>
             <Route exact path="/login"element={<LogIn/>}/> 
             <Route exact path="/home"element={<Home/>}/>
