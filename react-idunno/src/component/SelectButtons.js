@@ -11,7 +11,7 @@ function SelectButtons ({button,categorySelection}){
     
     return(
         <div>
-        <div><button type="button" className={active ? "myButton2" : "myButton"} onClick={()=> {categorySelection();}} >{button}</button></div>
+        <div><button type="button" className={active ? "myButton2" : "myButton"} onClick={()=> {categorySelection(); handleClick();firstButtonPressed()}} >{button}</button></div>
         </div>
     );
 };
