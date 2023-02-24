@@ -71,14 +71,14 @@ function Login() {
         </div>
         <div className="form-group  ">
           <label htmlFor="password">Password</label>
-          <input type="password" className="form-control" id="password" value={values.password}onChange={handleChange("password")} />
+          <input type="password" className="form-control password2" id="password" value={values.password}onChange={handleChange("password")} />
         </div>
        
         <div className="form-group form-check">
           <input type="checkbox" className="form-check-input" id="rememberMe" />
           <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary loginbutton">
           Log In
         </button>
       </form>

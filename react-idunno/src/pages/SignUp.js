@@ -85,7 +85,7 @@ return (
         <label htmlFor="signUpName">Username</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control username"
           id="signUpName"
           value={values.name}
           onChange={handleChange("name")}
@@ -95,7 +95,7 @@ return (
         <label htmlFor="signUpPassword">Password</label>
         <input
           type="password"
-          className="form-control"
+          className="form-control password"
           id="signUpPassword"
           value={values.password}
           onChange={handleChange("password")}
