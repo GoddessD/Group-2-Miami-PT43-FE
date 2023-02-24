@@ -9,7 +9,9 @@ const Home = () => {
   return (
     <div className="image-container">
       <div className='header-container'>
-        <h1 className='header'>The Day Is<br /> Yours... Let<br />Us Plan It!
+        <h1 className='header'>The Day Is<br /> Yours... Let<br />Us Plan It! </h1>
+        </div>
+        <div className="header-text">
           <h5>Don't Know what to do ?...Don't know where yo eat or have fun? ? Plan your day with ease!<br />
             Our website offers the ability to generate your daily plans with friends, family, or by yourself.<br />
             From planning an outdoor activity to
@@ -18,11 +20,11 @@ const Home = () => {
           <Link to="/login">
             <button type="button" class="btn btn-danger">MAKE MY PLANS</button>
           </Link>
-        </h1>
+       
         </div>
 
         
-      <div className='image-wrapper'>
+      <div className='image-wrapper' style={{width:"75%", height:"75%"}}>
         <img src='/idkicon.png' alt='robot' />
       </div>
       <div class='main-content'>
@@ -31,15 +33,15 @@ const Home = () => {
       
       
       
-      
+      <div class="home-cards">
       <div class="row">
-        <div class="card mb-3" style={{ maxWidth: "540px" }}>
+        <div class="card mb-3" style={{ maxWidth: "540px", height: "200px" }}>
           <div class="row g-0">
             <div class="col-md-4">
               <img src='/spoon and fork.png' class="img-fluid rounded-start" alt="..." />
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body card-margin">
                 <h5 class="card-title">HUNGRY???</h5>
                 <p class="card-text">idunno generates restaurants in your area for you to enjoy dinner weather its with your friends , solo, or </p>
               </div>
@@ -48,13 +50,13 @@ const Home = () => {
         </div>
 
 
-        <div class="card mb-3" style={{ maxWidth: "540px" }}>
+        <div class="card mb-3" style={{ maxWidth: "540px",maxHeight:"200px" }}>
           <div class="row g-0">
             <div class="col-md-4">
               <img src='/family icon.webp' class="img-fluid rounded-start" alt="..." />
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body card-margin">
                 <h5 class="card-title"> FAMILY OUTING </h5>
                 <p class="card-text">We know family is everything , allowing us to <br />plan your outing gives you more time to enjoy them. </p>
 
@@ -64,16 +66,17 @@ const Home = () => {
         </div>
 
 
-        <div class="card mb-3" style={{ maxWidth: "540px" }}>
+        <div class="card mb-3" style={{ maxWidth: "540px", maxHeight:"200px" }}>
           <div class="row g-0">
             <div class="col-md-4">
               <img src='/idunno man.png' class="img-fluid rounded-start" alt="..." />
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body card-margin">
                 <h5 class="card-title">SOLO PLANS</h5>
                 <p class="card-text">Introvert, selfcare, or maybe just a "YOU" day, Lonely with No Plans ?<br /> We got YOU. </p>
 
+              </div>
               </div>
             </div>
           </div>

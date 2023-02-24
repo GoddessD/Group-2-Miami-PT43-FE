@@ -18,6 +18,11 @@
   color: pink;
 }
 
+.card-margin{
+  margin-bottom: 50px;
+}
+
+
 .container-fluid {
   display: flex;
   justify-content: space-evenly;
@@ -70,7 +75,7 @@ img.navbar-logo {
 
 
 .header {
-  text-align: left;
+  text-align: right;
   font-size: 7em;
   font-weight: bold;
   padding: 20px;
@@ -78,6 +83,12 @@ img.navbar-logo {
   font-family: Courier New, Courier, monospace,
 
   
+}
+
+
+.header-text{
+  float:right;
+  color:white;
 }
 
 .main-content {
