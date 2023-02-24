@@ -1,17 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+
 .App {
   text-align: center;
-  background-color: blue;
+  background-color: rgb(purple);
   
 }
 
-.container-fluid{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
 .App-header {
-  background-color:pink;
+  background-color: pink;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,17 +18,38 @@
   color: pink;
 }
 
+.card-margin{
+  margin-bottom: 50px;
+}
+
+
+.container-fluid {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.center-button {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
 
 .navbar {
-  color :white;
+  color: white;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 img.navbar-logo {
-  width:150px;
-  height: 150px;
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .navbar-brand {
@@ -40,29 +58,42 @@ img.navbar-logo {
 
 }
 
+.nav-names {
+  justify-content: center;
+
+}
+
+
+
 .left-container {
   float: center;
-  display:block;
+  display: block;
   padding: 0;
-  margin:25px;
+  margin: 25px;
 }
 
 
 
 .header {
-  text-align: left;
+  text-align: right;
   font-size: 7em;
   font-weight: bold;
   padding: 20px;
   color: gold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier New, Courier, monospace,
 
   
 }
 
+
+.header-text{
+  float:right;
+  color:white;
+}
+
 .main-content {
   display: inline-block;
-  float: left;
+  float: none;
 }
 
 img {
@@ -71,21 +102,23 @@ img {
     float: right;
   }
 
+  .img-carousel{
+    width: 10%;
+    height: 10%;
+  }
 
 .div.button-container {
-  
   justify-content: flex-end;
   padding-left: 20%;
-
-  }
-button {
-  margin-left:10px;
-  margin-right: 10px;
-}  
-
-.custom-color{
-  background-color: rgb(194, 152, 75);
+  float: right;
 }
+
+
+button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 
 .login-form {
@@ -107,39 +140,54 @@ button {
 .submit-button {
   width: 300px;
   background-color: #4CAF50;
-  color:
+  color:rgb(3, 3, 29);
 }
 
 .button-container.right {
-  position: absolute; /*
+  position: absolute;
+  /*
   right: 0;
 }
 
 
 .login-form {
   width: 300px; /* adjust width as needed */
-  height: 300px; /* add a fixed height */
+  height: 300px;
+  /* add a fixed height */
   margin: 0 auto;
   padding: 20px;
-  border-radius: 10px; /* round the corners */
+  border-radius: 10px;
+  /* round the corners */
   box-shadow: 0px 0px 10px #ccc;
   background-color: #fafafa;
 }
 
 .form-group {
   margin-bottom: 20px;
+  color: white;
 }
 
-.form-control {
+.form-box {
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #333;
+  
+}
+
+/* .form-control {
   border-radius: 5px;
   border: none;
   padding: 10px;
   box-shadow: inset 0px 0px 5px #ccc;
-}
+} */
 
 .form-text {
   font-size: 12px;
-  color: #333;
+  color: rgb(248, 244, 244);
 }
 
 .form-check-input {
@@ -149,7 +197,7 @@ button {
 
 .form-check-label {
   font-size: 14px;
-  color: #333;
+  color:white;
   margin-left: 10px;
 }
 
@@ -165,35 +213,184 @@ button {
   box-shadow: 0px 0px 5px #ccc;
 }
 
+
 .center-left {
   float: left;
-  display:block;
+  display: block;
   padding: 0;
-  margin:25px;
-  background-color:black;
-  text-color: white;
+  margin: 25px;
+  background-color: black;
 }
 
 .appcover {
   border-color: black;
   float: right;
-  display:block;
+  display: block;
   padding: 0;
-  margin:25px;
+  margin: 25px;
+  
+}
+
+
+button {
+  margin-top: 20px;
+  margin-left: 0;
+  padding:  20px;
+  font-size: 20px;
+
+}
+
+.header-container {
+  float: left;
+}
+
+.image-wrapper {
+  float: right;
+  color: #ccc;
+}
+
+.image-container {
+  
+  background-image: url('../public/purple background.png');
+}
+
+.main-content {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+
+
+.header {
+  font-size: 120px;
+  color: white;
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  padding-left: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 20px;
+}
+
+h5 {
+
+  padding-top: 20px;
+  padding-left: 5px;
+
+}
+
+button{
+  padding-left: 20px;
+}
+
+
+
+.form-container {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: #333;
+  background-image: url('../public/purple background.png');
+}
+
+.form-control {
+  width: 100%;
+  /* margin-bottom: 10px; */
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid rgb(243, 235, 235);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username{
+  margin-right: 30px;
+  position:relative;
+  right:50px;
+}
+
+.password2 {
+  position:relative;
+  right:75px;
+  bottom: 40px;
+}
+
+.loginbutton {
+  position:relative;
+  bottom:30px;
+}
+
+.password {
+  position:relative;
+  right:105px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.form-background {
+  background-image: url('../public/purple background.png');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-backgroundsu {
+ background-color: #333;
+}
+
+
+div.row {
+
+  border-spacing: 10px;
+  margin: 20px;
+
+}
+
+
+  
+
+.btn-primary:hover {
+  background-color: #2b6da9;
 }
 
 .Card {
   display: flex;  
   flex-direction: row;
-  justify-content: center;
 }
+
+
 .center-left {
   float: left;
   display:block;
   padding: 0;
   margin:25px;
   background-color:black;
-  text-color: white; 
+  color: white; 
 }
 
 .Select,.Decide {
@@ -206,17 +403,12 @@ button {
   position: relative;
   margin: auto;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .selectedbuttons{
   background: green;
 
-}
-
-.cardwidth {
-  max-width: 300px;
-  min-width: 300px;
- 
 }
 
 .display {
@@ -229,4 +421,317 @@ button {
 
 .display3 {
   display: none;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 53px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+  color: white; }
+
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-indicators {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 2;
+display: flex;
+justify-content: center;
+padding: 0;
+margin-right: 15%;
+margin-bottom: 1rem;
+margin-left: 15%;
+list-style: none
+}
+
+.carousel-inner {
+  position: relative;
+width: 100%;
+overflow: hidden
+}
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: block;
+
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.myButton2 {
+	box-shadow:inset 0px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #66f894 5%, #11b043 100%);
+	background-color:#11b043;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 53px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+}
+
+.myButton2:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.myButton3 {
+	box-shadow:inset 9px 0px 0px -50px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 68px;
+	text-decoration:none;
+	text-shadow:1px 3px 0px #9752cc;
+}
+.myButton3:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
+
+.GCard {
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  
+    
+}
+
+
+.cardwidth {
+  max-width: 300px;
+  min-width: 300px;
+ 
+}
+
+.booknow {
+    box-shadow:inset 0px 1px 0px 0px #efdcfb;
+    background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+    background-color:#dfbdfa;
+    border-radius:6px;
+    border:1px solid #c584f3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    font-style:italic;
+    padding:6px 9px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #9752cc;
+    margin-top: 2px;
+  }
+.booknow:hover {
+    background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+    background-color:#bc80ea;
+  }
+.booknow:active {
+    position:relative;
+    top:1px;
+  }
+
+.carousel-item {
+  height: 32rem;
+  position: relative;
+display: none;
+float: left;
+width: 100%;
+margin-right: -100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+transition: transform .6s ease-in-out
+}
+
+.carousel-control-prev {
+  left:0;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+top: 0;
+bottom: 0;
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 15%;
+padding: 0;
+color: #fff;
+text-align: center;
+background: 0 0;
+border: 0;
+opacity: .5;
+transition: opacity .15s ease
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+margin: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+display: flex;
+align-items: center;
+}
+
+
+.button {
+  border-radius: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.carousel-control-next-icon {
+  background-image: url(https://loremflickr.com/g/320/240/topevents);
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width:2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+
+}
+
+.Decide{
+  color: #fff04a;
+  justify-content: center;
+  display: flex;
+  font-family: 'Gajraj One', cursive;
+  font-size: 65px;
+}
+
+.Select{
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  position: relative;
+	letter-spacing: 5px;
+	color: #753e9e;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect : below 1px linear-gradient(transparent , #0004);
+	line-height: 0.70em;
+	outline: none;
+	animation: animate 3s linear infinite;
+}
+
+.Generator{
+  background: #753e9e;
+}
+
+.Select2{
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  position: relative;
+	letter-spacing: 5px;
+	color: #753e9e;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect : below 1px linear-gradient(transparent , #0004);
+	line-height: 0.70em;
+	outline: none;
+	animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+		color: #753e9e;
+		text-shadow: #ff0000;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+		color: #ff0000;
+		/* text-shadow: 0 0 10px #03bcf4,
+		            0 0 20px #03bcf4,
+		            0 0 40px #03bcf4,
+		            0 0 80px #03bcf4,
+		            0 0 160px #03bcf4; */
+
+	}
+}
+
+.card-text,.card-title{
+  color: #000000;
+  text-align: center;
+}
+
+.tryAgain{
+  box-shadow:inset 0px 1px 0px 0px #efdcfb;
+    background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+    background-color:#dfbdfa;
+    border-radius:6px;
+    border:1px solid #c584f3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    font-style:italic;
+    padding:6px 9px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #9752cc;
+    margin-top: 2px;
+}
+
+.tryAgain:hover {
+  background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+  background-color:#bc80ea;
+}
+.tryAgain:active {
+  position:relative;
+  top:1px;
 }
