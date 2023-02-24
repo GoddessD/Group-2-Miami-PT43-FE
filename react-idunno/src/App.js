@@ -10,7 +10,6 @@ import Generator from './pages/Generator';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 
-
 function App() {
   return (
     <div className='App'>

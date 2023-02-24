@@ -3,7 +3,7 @@ import "../App.css"
 import { useState } from "react";
 
 
-function SelectButtons ({button,categorySelection,firstButtonPressed}){
+function SelectButtons ({button,categorySelection}){
     const [active,setActive] = useState(false);
     const handleClick = () => {
         setActive(!active);
