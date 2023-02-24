@@ -3,6 +3,7 @@ import "../App.css"
 import Card from "../component/Card";
 import SelectButtons from "../component/SelectButtons";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 
 
@@ -186,7 +187,7 @@ const Generator = () => {
   // if category button is selected
   // then card button is true
 
-  return (
+  return localStorage.token ? (
     <div className="Generator">
       <h1 className="Decide">LET US DECIDE</h1>
       <h2 className="Select">
@@ -210,10 +211,9 @@ const Generator = () => {
         {/* <Card display={display3} src={eventPicture} title={eventTitle} description={eventDescription} button1={eventButton} generate={eventGenerate} button2={eventSaveButton} saveIt={eventSaveIt} /> */}
       </div>
     </div>
-  )
-  // : (
-  //   <Navigate to='/home'/>
-  // );
+  ) :(
+      <Navigate to='/'/>  )
+  
 };
 
 
